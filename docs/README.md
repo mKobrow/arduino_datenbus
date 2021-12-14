@@ -11,3 +11,6 @@ Inhalte
 $$
     \frac{a}{b}=a\cdot\frac{1}{b}
 $$
+```python
+import RPi.GPIO as GPIO
+```

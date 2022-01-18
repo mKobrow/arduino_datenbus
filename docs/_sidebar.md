@@ -1,4 +1,4 @@
 <!-- docs/_sidebar.md -->
 
 - Theoretische Einführung
-  - [Arduino Basics](README.md)
+  - [Arduino Basics](basics.md)

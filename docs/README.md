@@ -1,16 +1,3 @@
-# Headline
+# Arduino Basics
 
-> An awesome project.
-
-## Awesome Subheader
-
-Inhalte
-
-## Another one
-
-$$
-    \frac{a}{b}=a\cdot\frac{1}{b}
-$$
-```python
-import RPi.GPIO as GPIO
-```
+> Idee war eine Dokumentation für die selbstständige Bearbeitung des Projektes für Schüler*innen zu erstellen. Vielleicht führe ich das später noch fort.

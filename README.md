@@ -2,6 +2,10 @@
 
 Ein Projekt zur Veranschaulichung der Funktion paralleler Kommunikation in Informatiksystemen.
 
+## Entstehung
+
+Das Projekt ist als Teil der Prüfungsleistung im Rahmen des Moduls *Fachseminar Didaktik der Informatik* an der Uni Leipzig entstanden.
+
 ## Idee
 
 Schüler*innen erarbeiten in Partnerarbeit (Sender und Empfänger) einzelne Geräte, die am Ende zusammenspielen sollen.

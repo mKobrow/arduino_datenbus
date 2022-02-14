@@ -11,8 +11,6 @@ int delayTime = 1000;
 
 byte dataCounter = 0;
 
-
-
 void setup() {
   // Initialisierung des Displays
   lcd.init();

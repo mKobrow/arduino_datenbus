@@ -1,7 +1,11 @@
 // Ausgangspins (most significant to least significant)
 int dataPins[] = {15,13,2,0,4,5,12,14};
 
+// zu sendene Nachricht (Display ist 32 Zeichen lang)
 char message[] = "Hello, World! This may be too long";
+
+// Verzögerung zwischen den gesendeten Nachrichten in ms
+int delayTime = 1000;
 
 void setup() {
   // delay für Entprellung des Reset Tasters
@@ -16,7 +20,7 @@ void setup() {
     digitalWrite(dataPins[i], bitRead(2, i));
   }
 
-  delay(1000);
+  delay(delayTime);
   
   // Schleife über Buchstaben der Nachricht
   for(int i = 0; i < sizeof(message); i++) {
@@ -24,7 +28,7 @@ void setup() {
     for(int j = 7; j >= 0; j--) {
       digitalWrite(dataPins[j], bitRead(message[i],j));
     }
-    delay(1000);
+    delay(delayTime);
   }
 
   // schreibe ETX (end of text)

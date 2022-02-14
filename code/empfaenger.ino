@@ -6,7 +6,12 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 // Festlegen der Eingangspins (most significant to least significant)
 byte dataPins[] = {53,51,49,47,45,43,41,39};
 
+// Verzögerung zwischen den gesendeten Nachrichten in ms
+int delayTime = 1000;
+
 byte dataCounter = 0;
+
+
 
 void setup() {
   // Initialisierung des Displays
@@ -25,7 +30,7 @@ void loop() {
   // lese alle Sekunde ein Zeichen von den Pins
   char character;
   character = readPins();
-  delay(1000);
+  delay(delayTime);
 
   // wenn Zeichen STX (start of text)
   if(character == 2){
@@ -35,10 +40,10 @@ void loop() {
     do {
       // schreibe das Zeichen auf das Display, isPrintable faengt Fehler ab
       if(isPrintable(character)) {
-        print_lcd(lcd, character, dataCounter);
+        printLCD(lcd, character, dataCounter);
       }
       // warte, lese naechstes Zeichen
-      delay(1000);
+      delay(delayTime);
       dataCounter++;
       character = readPins();
     } while(character != 3);
@@ -56,7 +61,7 @@ char readPins () {
 }
 
 // schreibt auf LCD und beachtet die maximale LCD laenge
-void print_lcd (LiquidCrystal_I2C lcd, char c, byte counter) {
+void printLCD (LiquidCrystal_I2C lcd, char c, byte counter) {
   if (counter < 16) {
     lcd.setCursor(counter, 0);
   } else {

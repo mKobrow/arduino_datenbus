@@ -1,7 +1,7 @@
 // Ausgangspins (most significant to least significant)
 int dataPins[] = {15,13,2,0,4,5,12,14};
 
-// zu sendene Nachricht (Display ist 32 Zeichen lang)
+// zu sendende Nachricht (Display ist 32 Zeichen lang)
 char message[] = "Hello, World! This may be too long";
 
 // Verzögerung zwischen den gesendeten Nachrichten in ms
